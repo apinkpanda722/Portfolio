@@ -11,6 +11,7 @@
   --color-grey: #616161;
   --color-light-grey: #7c7979;
   --color-blue: #73aace;
+  --color-yellow: #fff5cb;
 
   /* Font size */
   --font-large: 48px;
@@ -26,6 +27,9 @@
 
   /* Size */
   --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
 }
 
 /* Universal tags */
@@ -123,9 +127,9 @@ p {
 #home {
   background: url("./imgs/Cities\ To\ Visit\ In\ Summer\ Pinterest\ Graphic.png")
     center/cover no-repeat;
-  padding: 80px;
+  padding: 20px;
   text-align: center;
-  height: 60vh;
+  padding-bottom: 80px;
 }
 
 #home,
@@ -137,7 +141,7 @@ button {
 }
 
 .home__title {
-  margin: 0;
+  margin-top: 40px;
   color: var(--color-white);
   margin-bottom: 30px;
 }
@@ -154,10 +158,12 @@ button {
   color: var(--color-light-white);
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
+  transition: all var(--animation-duration) ease;
 }
 
 .home__contact:hover {
   background-color: var(--color-dark-pink);
+  transform: scale(1.1);
 }
 .bg {
   background-color: rgba(0, 0, 0, 0.5);
@@ -166,4 +172,150 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* Section Common */
+.section {
+  padding: 50px;
+  text-align: center;
+  margin: auto;
+}
+
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* About */
+.about__majors {
+  display: flex;
+  justify-content: space-around;
+  margin: 80px 0;
+}
+
+.major__icon {
+  width: 170px;
+  height: 170px;
+  font-size: 70px;
+  line-height: 170px;
+  margin: auto;
+  margin-bottom: 16px;
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+}
+
+.major__icon i {
+  transition: all var(--animation-duration) ease;
+}
+
+.major__icon:hover i {
+  color: var(--color-dark-pink);
+  transform: rotate(-30deg) scale(1.1);
+}
+
+.major__title,
+.major__description {
+  color: var(--color-dark-grey);
+}
+
+.major__description {
+  font-size: var(--font-small);
+}
+
+.job {
+  display: flex;
+  align-items: center;
+}
+
+.job__description {
+  margin: 0 10px;
+  text-align: left;
+}
+
+.job__name,
+.job__period {
+  color: var(--color-light-grey);
+}
+
+.job__name {
+  font-size: var(--font-small);
+}
+
+.job__period {
+  font-size: var(--font-micro);
+}
+
+/* Skill */
+#skills {
+  background-color: var(--color-yellow);
+}
+
+.skillset {
+  display: flex;
+  background-color: var(--color-white);
+  color: var(--color-light-white);
+  margin: 20px 0;
+  border: 2px solid var(--color-blue);
+}
+
+.skill_description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skillset__title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  font-size: 30px;
+  border-bottom: 1px solid var(--color-blue);
+}
+
+.skill {
+  margin-bottom: 32px;
+}
+
+.skillset__left {
+  flex-basis: 50%;
+  padding: 30px;
+  border: 1px solid var(--color-blue);
+}
+
+.skillset__right {
+  flex-basis: 50%;
+  padding: 30px;
+  border: 1px solid var(--color-blue);
+}
+
+.tools,
+.etc {
+  padding: 20px;
+}
+
+.front__end-icon img,
+.back__end-icon img {
+  width: 80px;
+  height: 80px;
+}
+
+.front__end-wrapping {
+  padding-top: 30px;
+}
+
+.front__end,
+.back__end {
+  display: inline-block;
+  margin: 20px;
+  transition: all var(--animation-duration) ease;
+}
+
+.front__end:hover,
+.back__end:hover {
+  transform: scale(1.1);
+}
+
+.front__end-name,
+.back__end-name {
+  color: black;
 }

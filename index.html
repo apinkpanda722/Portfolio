@@ -49,7 +49,7 @@
       </div>
     </section>
     <!-- About -->
-    <section id="about">
+    <section id="about" class="section section__container">
       <h1>About me</h1>
       <p>
         I'm interested in all aspects of software development. Recently, my
@@ -71,7 +71,7 @@
           <div class="major__icon">
             <i class="fas fa-desktop"></i>
           </div>
-          <div class="major__title">Front-End</div>
+          <h2 class="major__title">Front-End</h2>
           <div class="major__description">HTML, CSS, JavaScript,
             <br />React, Web APIs
           </div>
@@ -80,7 +80,7 @@
           <div class="major__icon">
             <i class="fas fa-server"></i>
           </div>
-          <div class="major__title">Back-End</div>
+          <h2 class="major__title">Back-End</h2>
           <div class="major__description">Java, JavaScript, NodeJS,
             <br />Python, Rest APIs
           </div>
@@ -88,92 +88,154 @@
       </div>
       <div class="about__jobs">
         <div class="job">
-          <img src="./imgs/aws_image2.png" alt="aws" width="50" height="50" class="job__logo">
-          <p class="job__name">
-            I have completed the intensive training course for young people with innovative growth in 2019 conducted by the Ministry of Science and ICT for six months.
-          </p>
-          <p class="job__period">
-            2019 May - 2019 November
-          </p>
+          <img src="./imgs/aws_image2.png" alt="aws" width="80" height="80" class="job__logo">
+          <div class="job__description">
+            <p class="job__name">
+              I have completed the intensive training course for young people with innovative growth in 2019 conducted by the Ministry of Science and ICT for six months.
+            </p>
+            <p class="job__period">
+              2019 May - 2019 November
+            </p>
+          </div>
         </div>
       </div>
     </section>
     <!-- Skills -->
-    <section id="skills">
-      <h1>Skills</h1>
-      <h2>Skils & Attributes</h2>
-      <p>Experience with all phases of the software life-cycle. Passion for learning new technologies. Capable of working within a team environment and independently</p>
-      <div class="skillset">
-        <div class="skillset__left">
-          <h3 class="skillset__title">Skills</h3>
-          <div class="skill">
-            <div class="skill_description">
-              <span>HTML</span>
-              <span>90%</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value"></div>
-            </div>
+    <section id="skills" class="section">
+      <div class="section__container">
+        <h1>Skills</h1>
+        <h2>Skils & Attributes</h2>
+        <p>Experience with all phases of the software life-cycle. Passion for learning new technologies. </br> Capable of working within a team environment and independently</p>
+        <div class="skillset">
+          <div class="skillset__left">
+            <h3 class="skillset__title">Front-End</h3>
+              <div class="front__end-wrapping">
+                <div class="front__end">
+                  <div class="front__end-icon">
+                    <img src="./imgs/front-end/html5.png" />
+                  </div>
+                  <div class="front__end-name">HTML5</div>
+                </div>
+                <div class="front__end">
+                  <div class="front__end-icon">
+                    <img src="./imgs/front-end/css.png" />
+                  </div>
+                  <div class="front__end-name">CSS3</div>
+                </div>
+                <div class="front__end">
+                  <div class="front__end-icon">
+                    <img src="./imgs/front-end/js.png" />
+                  </div>
+                  <div class="front__end-name">JavaScript</div>
+                </div>
+                <div class="front__end">
+                  <div class="front__end-icon">
+                    <img src="./imgs/front-end/react.png" />
+                  </div>
+                  <div class="front__end-name">React</div>
+                </div>
+                <div class="front__end">
+                  <div class="front__end-icon">
+                    <img src="./imgs/front-end/sass.png" />
+                  </div>
+                  <div class="front__end-name">Sass</div>
+                </div>
+                <div class="front__end">
+                  <div class="front__end-icon">
+                    <img src="./imgs/front-end/typescript.png" />
+                  </div>
+                  <div class="front__end-name">Typescript</div>
+                </div>
+                <div class="front__end">
+                  <div class="front__end-icon">
+                    <img src="./imgs/front-end/webpack.png" />
+                  </div>
+                  <div class="front__end-name">Webpack</div>
+                </div>
+              </div>
           </div>
-          <div class="skill">
-            <div class="skill_description">
-              <span>CSS</span>
-              <span>80%</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value"></div>
-            </div>
+          <di class="skillset__right">
+            <h3 class="skillset__title">Back-End</h3>
+              <div class="back__end-wrapping">
+                <div class="back__end">
+                  <div class="back__end-icon">
+                    <img src="./imgs/back-end/nodejs.png" />
+                  </div>
+                  <div class="back__end-name">NodeJS</div>
+                </div>
+                <div class="back__end">
+                  <div class="back__end-icon">
+                    <img src="./imgs/back-end/python.png" />
+                  </div>
+                  <div class="back__end-name">Python</div>
+                </div>
+                <div class="back__end">
+                  <div class="back__end-icon">
+                    <img src="./imgs/back-end/django.png" />
+                  </div>
+                  <div class="back__end-name">Django</div>
+                </div>
+                <div class="back__end">
+                  <div class="back__end-icon">
+                    <img src="./imgs/back-end/java.png" />
+                  </div>
+                  <div class="back__end-name">Java</div>
+                </div>
+                <div class="back__end">
+                  <div class="back__end-icon">
+                    <img src="./imgs/back-end/mysql.png" />
+                  </div>
+                  <div class="back__end-name">Mysql</div>
+                </div>
+                <div class="back__end">
+                  <div class="back__end-icon">
+                    <img src="./imgs/back-end/postgresql-logo.png" />
+                  </div>
+                  <div class="back__end-name">Postgresql</div>
+                </div>
+                <div class="back__end">
+                  <div class="back__end-icon">
+                    <img src="./imgs/back-end/mongo.png" />
+                  </div>
+                  <div class="back__end-name">MongoDB</div>
+                </div>
+                <div class="back__end">
+                  <div class="back__end-icon">
+                    <img src="./imgs/back-end/aws.png" />
+                  </div>
+                  <div class="back__end-name">AWS</div>
+                </div>
+                <div class="back__end">
+                  <div class="back__end-icon">
+                    <img src="./imgs/back-end/GCP.png" />
+                  </div>
+                  <div class="back__end-name">GCP</div>
+                </div>
+                <div class="back__end">
+                  <div class="back__end-icon">
+                    <img src="./imgs/back-end/linux.png" />
+                  </div>
+                  <div class="back__end-name">Linux</div>
+                </div>
+                <div class="back__end">
+                  <div class="back__end-icon">
+                    <img src="./imgs/back-end/travis.png" />
+                  </div>
+                  <div class="back__end-name">Travis CI</div>
+                </div>
+                <div class="back__end">
+                  <div class="back__end-icon">
+                    <img src="./imgs/back-end/heroku.jpg" />
+                  </div>
+                  <div class="back__end-name">Heroku</div>
+                </div>
+              </div>
           </div>
-          <div class="skill">
-            <div class="skill_description">
-              <span>JavaScript</span>
-              <span>80%</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill_description">
-              <span>NodeJS</span>
-              <span>70%</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill_description">
-              <span>React</span>
-              <span>60%</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value"></div>
-            </div>
-          </div>
-        </div>
-        <div class="skillset__right">
-          <div class="tools">
-            <h3 class="skillset__title">Tools</h3>
-            <ul class="tools__list">
-              <li><span>Visual Studio Code</span></li>
-              <li><span>IntelliJ</span></li>
-              <li><span></span></li>
-              <li><span></span></li>
-              <li><span></span></li>
-            </ul>
-          </div>
-          <div class="etc">
-            <h3 class="skillset__title">Etc</h3>
-            <ul class="etc__list">
-              <li><span>Git</span></li>
-            </ul>
-          </div>
-        </div>
+        </div>  
       </div>
     </section>
     <!-- Work -->
-    <section id="work">
+    <section id="work" class="section">
       <h1>My Work</h1>
       <h3>Projects</h3>
       <div class="work__categories">
@@ -220,7 +282,7 @@
       </div>
     </section>
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="section">
       <h1 class="contact__title">Let's talk</h1>
       <h2 class="contact__email">iih907@gmail.com</h2>
       <div class="contact__links">
