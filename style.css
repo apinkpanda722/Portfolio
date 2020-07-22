@@ -124,6 +124,15 @@ p {
   background-color: var(--color-dark-pink);
 }
 
+.navbar__toggle-btn {
+  position: absolute;
+  display: none;
+  top: 28px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+}
+
 /* Home */
 #home {
   background: url("./imgs/Cities\ To\ Visit\ In\ Summer\ Pinterest\ Graphic.png")
@@ -422,6 +431,7 @@ button {
 
 /* Contact */
 #contact {
+  margin-top: 80px;
   background-color: var(--color-dark-white);
 }
 
@@ -437,10 +447,41 @@ button {
 
 .contact__links i {
   font-size: var(--font-large);
-  margin: 24px 10px;
+  margin: 15px 10px;
   transition: all var(--animation-duration) ease-in;
 }
 
 .contact__links i:hover {
   transform: scale(1.1);
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    display: none;
+  }
+
+  .about__majors {
+    flex-direction: column;
+  }
+
+  .major {
+    margin-bottom: 30px;
+  }
+
+  .project {
+    flex-grow: 1;
+  }
 }
