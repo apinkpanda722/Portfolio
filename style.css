@@ -13,6 +13,7 @@
   --color-light-grey: #7c7979;
   --color-blue: #73aace;
   --color-yellow: #fff5cb;
+  --color-navbar: linear-gradient(to right, #19a7d2, #6547e3);
 
   /* Font size */
   --font-large: 48px;
@@ -60,6 +61,7 @@ ul {
   list-style: none;
   padding-left: 0;
 }
+
 /* Typography */
 h1 {
   font-size: var(--font-large);
@@ -92,12 +94,20 @@ p {
 /* NavBar */
 
 #navbar {
+  z-index: 1500;
+  position: fixed;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #19a7d2, #6547e3);
+  background-color: transparent;
   color: var(--color-white);
   padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
+  background: var(--color-navbar);
 }
 
 .navbar__menu {
@@ -138,6 +148,7 @@ p {
   background: url("./imgs/Cities\ To\ Visit\ In\ Summer\ Pinterest\ Graphic.png")
     center/cover no-repeat;
   padding: 20px;
+  padding-top: 120px;
   text-align: center;
   padding-bottom: 80px;
 }
@@ -148,6 +159,15 @@ h2,
 button {
   position: relative;
   z-index: 1000;
+}
+
+.bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .home__title {
@@ -174,14 +194,6 @@ button {
 .home__contact:hover {
   background-color: var(--color-dark-pink);
   transform: scale(1.1);
-}
-.bg {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 /* Section Common */
