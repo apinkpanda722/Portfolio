@@ -117,6 +117,11 @@ p {
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  display: flex;
+}
+
+.navbar__title {
+  margin-left: 10px;
 }
 
 .navbar__menu__item {
@@ -198,6 +203,7 @@ button {
 /* Section Common */
 .section {
   padding: 50px;
+  padding-top: 80px;
   text-align: center;
   margin: auto;
 }
@@ -307,6 +313,7 @@ button {
   flex-basis: 50%;
   padding: 30px;
   border: 1px solid var(--color-blue);
+  overflow-x: hidden;
 }
 
 .tools,
@@ -322,6 +329,10 @@ button {
 
 .front__end-wrapping {
   padding-top: 30px;
+}
+
+.back__end-wrapping {
+  overflow-x: hidden;
 }
 
 .front__end,
@@ -352,6 +363,7 @@ button {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative;
 }
 
 .category__btn.selected,
@@ -363,7 +375,7 @@ button {
 .category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
-  top: 0;
+  top: 6px;
 }
 
 .category__count {
@@ -375,9 +387,9 @@ button {
   display: inline-block;
   line-height: 24px;
   margin-left: 10px;
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 16px;
   opacity: 0;
   transition: all var(--animation-duration) ease-in;
 }
@@ -500,14 +512,30 @@ button {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
   .navbar__toggle-btn {
     display: block;
+    top: 20px;
+    right: 16px;
+    font-size: var(--font-medium);
   }
 
   #navbar {
     flex-direction: column;
     align-items: flex-start;
     background: var(--color-navbar);
+  }
+
+  .navbar__title {
+    padding-top: 8px;
   }
 
   .navbar__menus {
@@ -525,15 +553,43 @@ button {
     display: block;
   }
 
+  .section {
+    padding: 16px;
+  }
+
   .about__majors {
     flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .about__jobs {
+    margin-bottom: 30px;
   }
 
   .major {
     margin-bottom: 30px;
   }
 
+  .category__btn {
+    margin: 4px 0;
+    width: 100%;
+  }
+
+  .category__btn.selected .category__count,
+  .category__btn:hover .category__count {
+    top: 5px;
+  }
+
   .project {
     flex-grow: 1;
+  }
+
+  .arrow-up {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    right: 16px;
+    bottom: 16px;
   }
 }
