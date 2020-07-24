@@ -41,7 +41,7 @@
 
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   cursor: default;
 }
 
@@ -144,7 +144,7 @@ p {
 
 /* Home */
 #home {
-  background: url("./imgs/Cities\ To\ Visit\ In\ Summer\ Pinterest\ Graphic.png")
+  background: url('./imgs/Cities\ To\ Visit\ In\ Summer\ Pinterest\ Graphic.png')
     center/cover no-repeat;
   padding: 20px;
   padding-top: 120px;
@@ -436,17 +436,17 @@ button {
 }
 
 .project__description h3 {
-  color: var(--color-white);
+  color: orange;
 }
 
 .project__description h3:after {
-  content: "";
+  content: '';
   display: block;
   position: relative;
   left: 50%;
-  margin-left: -12px;
+  transform: translateX(-50%);
   margin-top: 8px;
-  width: 25px;
+  width: 50px;
   height: 2px;
   background-color: var(--color-dark-white);
 }
@@ -507,13 +507,22 @@ button {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background: var(--color-navbar);
+  }
+
+  .navbar__menus {
+    width: 100%;
   }
 
   .navbar__menu {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
     width: 100%;
     display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
   }
 
   .about__majors {
