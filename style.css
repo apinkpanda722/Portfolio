@@ -183,9 +183,43 @@ button {
 .home__job {
   color: var(--color-blue);
   margin-bottom: 50px;
+  overflow: hidden;
+  position: relative;
+  width: 9.4em;
+  margin: 0 auto;
+  text-align: center;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  font-size: 50px;
+  padding: 0;
+  animation: typewriter 8s steps(30) infinite,
+    blinkTextCursor 500ms steps(30) infinite normal;
+}
+
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  30%,
+  70% {
+    width: 9.4em;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
 
 .home__contact {
+  margin-top: 50px;
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
   padding: 8px 12px;
@@ -551,6 +585,11 @@ button {
 
   .navbar__menu.open {
     display: block;
+  }
+
+  .home__job {
+    font-size: 30px;
+    max-width: 290px;
   }
 
   .section {
