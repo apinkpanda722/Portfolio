@@ -15,6 +15,14 @@
     />
     <link rel="icon" type="image/png" href="imgs/favicon.png" />
     <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="YouTubePopUp.jquery.js"></script>
+    <script type="text/javascript">
+      jQuery(function () {
+        jQuery("a.bla-1").YouTubePopUp({ autoplay: 1 });
+        jQuery("a.bla-2").YouTubePopUp({ autoplay: 0 }); // Disable autoplay
+      });
+    </script>
     <title>Portfolio</title>
   </head>
   <body>
@@ -69,6 +77,10 @@
         engineer intern. I also hold a Bachelor's and Master's Degree in
         computer science.
       </p>
+      <div class="iframe__wrapping">
+        <iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/2ariN2u8ZJ0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <h2>Graduation Piece</h2>
       <div class="about__majors">
         <div class="major">
           <div class="major__icon">
@@ -97,14 +109,14 @@
               I have completed the intensive training course for young people with innovative growth in 2019 conducted by the Ministry of Science and ICT for six months.
             </p>
             <p class="job__period">
-              2019 May - 2019 November
+              May - November 2019
             </p>
           </div>
         </div>
         <div class="job__buttons">
-          <a href="http://blogfiles.naver.net/MjAxOTA0MjRfMjE2/MDAxNTU2MDcyNDM5NzQ1.cwi49ouLrLR_TnsLy72FPkgUiJ8-31slXCEUCVOHkGgg.DswrW715LJe4ixJd8wDCZtjoWR2ZKoMDYTsdmYeSfM8g.PNG.itbank21c/3.png" class="job__button"><p>Curriculum</p></a>
-          <a href="https://drive.google.com/file/d/1rUP0qKCnW7pyQp-RwYqZrr5WA7pKtHIj/view?usp=sharing" class="job__button"><p>Team Project</p></a>
-          <a href="https://drive.google.com/file/d/1h6ynZ0QpGlRjSXHwtAQ62B_lZDGsM0tJ/view?usp=sharing" class="job__button"><p>Certification</p></a>
+          <a href="http://blogfiles.naver.net/MjAxOTA0MjRfMjE2/MDAxNTU2MDcyNDM5NzQ1.cwi49ouLrLR_TnsLy72FPkgUiJ8-31slXCEUCVOHkGgg.DswrW715LJe4ixJd8wDCZtjoWR2ZKoMDYTsdmYeSfM8g.PNG.itbank21c/3.png" target="_blank" class="job__button"><p>Curriculum</p></a>
+          <a href="https://drive.google.com/file/d/1rUP0qKCnW7pyQp-RwYqZrr5WA7pKtHIj/view?usp=sharing" target="_blank" class="job__button"><p>Team Project</p></a>
+          <a href="https://drive.google.com/file/d/1h6ynZ0QpGlRjSXHwtAQ62B_lZDGsM0tJ/view?usp=sharing" target="_blank" class="job__button"><p>Certification</p></a>
         </div>
       </div>
     </section>
@@ -252,62 +264,95 @@
         <button class="category__btn" data-filter="back-end">Back-End<span class="category__count">4</span></button>
       </div>
       <div class="work__projects">
-        <a href="https://github.com/apinkpanda722" class="project" taget="blank" data-type="front-end">
-          <img src="./imgs/projects/ㅇㅇ1.jpg" class="project__img" alt="DangDang">
+        <div class="project" data-type="front-end">
+          <img src="./imgs/projects/springboot2final.png" class="project__img" alt="DangDang">
           <div class="project__description">
-            <h3>Yun Woo</h3>
-            <span>She's Lovely</span>
+            <h3>Spring boot </br> Non-disruptive Deployment</h3>
+            <div class="span">
+              <a href="https://youtu.be/5XN9H9V7Lco" target="_blank" class="button bla-2">Demo</a>
+              <a href="https://github.com/apinkpanda722/springwebservice" target="_blank" class="button">Code</a>
+            </div>
+            <div class="front__end-factor">
+              <ul>
+                <li>JavaScript</li>
+                <li>Pug</li>
+                <li>Sass</li>
+                <li>Webpack</li>
+              </ul>
+            </div>
+            <div class="back__end-factor">
+              <ul>
+                <li>JavaScript</li>
+                <li>Express</li>
+                <li>NodeJS</li>
+                <li>Mongo DB</li>
+                <li>Passport</li>
+                <li>Babel</li>
+                <li>AWS S3</li>
+                <li>Heroku</li>
+              </ul>
+            </div>
           </div>
-        </a>
-        <a href="https://github.com/apinkpanda722" class="project" taget="blank" data-type="front-end">
+        </div>
+        <div class="project" data-type="front-end">
           <img src="./imgs/projects/여시 좋아.jpg" class="project__img alt="DangDang">
           <div class="project__description">
             <h3>Meung</h3>
-            <span>She's Lovely</span>
+            <div class="span">
+              <a href="https://youtu.be/5XN9H9V7Lco" class="button ">Demo</a>
+              <a href="https://github.com/apinkpanda722" class="button">Code</a>
+            </div>
           </div>
-        </a>
-        <a href="https://github.com/apinkpanda722" class="project" taget="blank" data-type="front-end">
+        </div>
+        <div class="project" data-type="front-end">
           <img src="./imgs/projects/연우 와.jpg" class="project__img alt="DangDang">
           <div class="project__description">
             <h3>Yun Woo</h3>
             <span>She's Lovely</span>
           </div>
-        </a>
-        <a href="https://github.com/apinkpanda722" class="project" taget="blank" data-type="back-end">
+        </div>
+        <div class="project" data-type="back-end">
           <img src="./imgs/projects/옹.jpg" class="project__img alt="DangDang">
           <div class="project__description">
             <h3>Rong</h3>
             <span>She's Lovely</span>
           </div>
-        </a>
-        <a href="https://github.com/apinkpanda722" class="project" taget="blank" data-type="back-end">
+        </div>
+        <div class="project" data-type="back-end">
           <img src="./imgs/projects/은서 옆선 ㄷㄷ.jpg" class="project__img alt="DangDang">
           <div class="project__description">
             <h3>Eun Seo</h3>
             <span>She's Lovely</span>
           </div>
-        </a>
-        <a href="https://github.com/apinkpanda722" class="project" taget="blank" data-type="back-end">
+        </div>
+        <div class="project" data-type="back-end">
           <img src="./imgs/projects/나은이가 이쁘긴 이뻐.jpg" class="project__img alt="DangDang">
           <div class="project__description">
             <h3>Naeun</h3>
             <span>She's Lovely</span>
           </div>
-        </a>
-        <a href="https://github.com/apinkpanda722" class="project" taget="blank" data-type="back-end">
+        </div>
+        <div class="project" data-type="back-end">
           <img src="./imgs/projects/임나영 허리 골반 실화냐.jpg" class="project__img alt="DangDang">
           <div class="project__description">
             <h3>golban</h3>
             <span>She's Lovely</span>
           </div>
-        </a>
-        <a href="https://github.com/apinkpanda722" class="project" taget="blank" data-type="front-end">
+        </div>
+        <div class="project" data-type="back-end">
+          <img src="./imgs/projects/CLC 은빈이몸매 ㄷㄷ.jpg" class="project__img alt="DangDang">
+          <div class="project__description">
+            <h3>EunBin</h3>
+            <span>She's Lovely</span>
+          </div>
+        </div>
+        <div class="project" data-type="front-end">
           <img src="./imgs/projects/나은이 진짜 이쁘네.jpg" class="project__img alt="DangDang">
           <div class="project__description">
             <h3>NiEun</h3>
             <span>She's Lovely</span>
           </div>
-        </a>
+        </div>
       </div>
     </section>
     <!-- Contact -->

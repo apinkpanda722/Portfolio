@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* Global */
 :root {
   /* Color */
@@ -127,6 +129,7 @@ p {
 .navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
+  font-size: var(--font-regular);
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: var(--size-border-radius);
@@ -247,6 +250,21 @@ button {
   margin: auto;
 }
 
+.section__container h1 {
+  margin-bottom: 70px;
+}
+
+/* Graduation Portfolio */
+.iframe__wrapping {
+  display: flex;
+  justify-content: center;
+}
+
+.iframe {
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
 /* About */
 .about__majors {
   display: flex;
@@ -315,9 +333,14 @@ button {
   padding: 8px 48px;
   position: relative;
   background-color: #ffae00fd;
+  transition: all var(--animation-duration) ease;
   border: 1px solid var(--color-dark-white);
   border-radius: var(--size-border-radius);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.job__button:hover {
+  transform: scale(1.3);
 }
 
 .job__button p {
@@ -339,7 +362,7 @@ button {
 }
 
 .job__name {
-  font-size: var(--font-medium);
+  font-size: 23px;
   margin-bottom: 40px;
 }
 
@@ -490,10 +513,12 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 280px;
+  width: 700px;
   height: 350px;
-  margin: 2px;
+  margin: 25px;
+  border-radius: 20px;
   background-color: var(--color-light-white);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .project.invisible {
@@ -502,6 +527,7 @@ button {
 
 .project__img {
   max-width: 100%;
+  width: 600px;
   max-height: 100%;
 }
 
@@ -516,6 +542,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 20px;
   transform: translateY(10px);
   transition: all var(--animation-duration) ease-in;
 }
@@ -535,10 +562,47 @@ button {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 8px;
+  margin: 15px 0;
   width: 50px;
   height: 2px;
   background-color: var(--color-dark-white);
+}
+
+.span {
+  margin-bottom: 50px;
+}
+
+.button {
+  padding: 5px;
+  color: var(--color-white);
+  font-size: var(--font-small);
+  border: 1px solid var(--color-white);
+  margin-right: 5px;
+}
+
+.front__end-factor ul,
+.back__end-factor ul {
+  display: flex;
+  justify-content: center;
+}
+
+.front__end-factor ul li,
+.back__end-factor ul li {
+  color: var(--color-white);
+  border-radius: 4px;
+}
+
+.front__end-factor ul li {
+  background-color: #19a7d2;
+  margin-right: 10px;
+  padding: 8px;
+}
+
+.back__end-factor ul li {
+  background-color: #6547e3;
+  margin: 0 5px;
+  align-self: center;
+  padding: 8px;
 }
 
 /* Contact */
@@ -564,7 +628,8 @@ button {
 }
 
 .contact__links i:hover {
-  transform: scale(1.1);
+  transform: scale(1.4);
+  color: var(--color-pink);
 }
 
 /* Scroll */
@@ -581,11 +646,168 @@ button {
   opacity: 0;
   pointer-events: none;
   transition: all 300ms ease-in;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .arrow-up.visible {
   pointer-events: auto;
   opacity: 1;
+}
+
+/*
+    Name: YouTubePopUp
+    Description: jQuery plugin to display YouTube or Vimeo video in PopUp, responsive and retina, easy to use.
+    Version: 1.0.1
+    Plugin URL: http://wp-time.com/youtube-popup-jquery-plugin/
+    Written By: Qassim Hassan
+    Twitter: @QQQHZ
+    Websites: wp-time.com | qass.im | wp-plugins.in
+    Dual licensed under the MIT and GPL licenses:
+        http://www.opensource.org/licenses/mit-license.php
+        http://www.gnu.org/licenses/gpl.html
+    Copyright (c) 2016 - Qassim Hassan
+*/
+
+.YouTubePopUp-Wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 9999999999999;
+}
+
+.YouTubePopUp-animation {
+  opacity: 0;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: YouTubePopUp;
+  animation-name: YouTubePopUp;
+}
+
+@-webkit-keyframes YouTubePopUp {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes YouTubePopUp {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+body.logged-in .YouTubePopUp-Wrap {
+  /* For WordPress */
+  top: 32px;
+  z-index: 99998;
+}
+
+.YouTubePopUp-Content {
+  max-width: 680px;
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+
+.YouTubePopUp-Content iframe {
+  max-width: 100% !important;
+  width: 100% !important;
+  display: block !important;
+  height: 480px !important;
+  border: none !important;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.YouTubePopUp-Hide {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: YouTubePopUpHide;
+  animation-name: YouTubePopUpHide;
+}
+
+@-webkit-keyframes YouTubePopUpHide {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes YouTubePopUpHide {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.YouTubePopUp-Close {
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  bottom: 528px;
+  right: 0px;
+  margin: auto 0;
+  width: 24px;
+  height: 24px;
+  background: url(../images/close.png) no-repeat;
+  background-size: 24px 24px;
+  -webkit-background-size: 24px 24px;
+  -moz-background-size: 24px 24px;
+  -o-background-size: 24px 24px;
+}
+
+.YouTubePopUp-Close:hover {
+  opacity: 0.5;
+}
+
+@media all and (max-width: 768px) and (min-width: 10px) {
+  .YouTubePopUp-Content {
+    max-width: 90%;
+  }
+}
+
+@media all and (max-width: 600px) and (min-width: 10px) {
+  .YouTubePopUp-Content iframe {
+    height: 320px !important;
+  }
+
+  .YouTubePopUp-Close {
+    bottom: 362px;
+  }
+}
+
+@media all and (max-width: 480px) and (min-width: 10px) {
+  .YouTubePopUp-Content iframe {
+    height: 220px !important;
+  }
+
+  .YouTubePopUp-Close {
+    bottom: 262px;
+  }
 }
 
 /* For below 768px screen width */
@@ -638,6 +860,11 @@ button {
 
   .section {
     padding: 16px;
+  }
+
+  .iframe {
+    width: 300px;
+    height: 200px;
   }
 
   .about__majors {
@@ -693,8 +920,17 @@ button {
     top: 5px;
   }
 
+  .project__img {
+    height: 350px;
+  }
+
   .project {
     flex-grow: 1;
+  }
+
+  .front__end-factor,
+  .back__end-factor {
+    display: none;
   }
 
   .arrow-up {
