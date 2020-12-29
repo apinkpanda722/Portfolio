@@ -129,6 +129,7 @@ p {
 .navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
+  color: var(--color-white);
   font-size: var(--font-regular);
   cursor: pointer;
   border-radius: var(--size-border-radius);
