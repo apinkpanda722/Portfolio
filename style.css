@@ -410,13 +410,13 @@ button {
 
 .skillset__left {
   flex-basis: 50%;
-  padding: 30px;
+  padding: 10px;
   border: 1px solid var(--color-blue);
 }
 
 .skillset__right {
   flex-basis: 50%;
-  padding: 30px;
+  padding: 10px;
   border: 1px solid var(--color-blue);
   overflow-x: hidden;
 }
@@ -433,7 +433,6 @@ button {
 }
 
 .front__end-wrapping {
-  padding-top: 30px;
 }
 
 .back__end-wrapping {
